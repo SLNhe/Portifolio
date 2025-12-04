@@ -1,0 +1,318 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #06060f;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border-bottom: 1px solid rgba(123, 79, 255, 0.3);
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+header nav a {
+    margin-left: 30px;
+    color: #ddd;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: #7b4fff;
+}
+
+/* HOME */
+#home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 70px;
+}
+
+#home h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #7b4fff;
+}
+
+#home p {
+    width: 60%;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+/* SLIDER - PROJETOS */
+.slider-container {
+    position: relative;
+    width: 90%;
+    height: 70vh;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(123, 79, 255, 0.2);
+}
+
+.slider-list {
+    position: relative; /* corrigido: agora não bloqueia clique */
+    width: 100%;
+    height: 100%;
+}
+
+/* 🔥 Impedir slides invisíveis de bloquear o clique */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(1.08);
+    transition: 1s ease-in-out;
+
+    pointer-events: none; /* não bloqueia o clique */
+    z-index: 0; /* invisíveis atrás */
+}
+
+.slide.active {
+    opacity: 1;
+    transform: scale(1);
+
+    pointer-events: auto; /* apenas o slide ativo recebe clique */
+    z-index: 10; /* ativo na frente */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(55%);
+}
+
+.slide .content {
+    position: absolute;
+    bottom: 18%;
+    left: 8%;
+    width: 45%;
+}
+
+.slide h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #b08cff;
+    text-shadow: 0 0 15px #7b4fff;
+}
+
+.slide p {
+    margin-top: 10px;
+    opacity: 0.85;
+}
+
+/* 🔥 Botão acima da camada do slider */
+.slide a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    border: 1px solid #7b4fff;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #fff;
+    backdrop-filter: blur(10px);
+    background: rgba(123, 79, 255, 0.2);
+
+    position: relative;
+    z-index: 20;     /* garante que clique funciona */
+    pointer-events: auto;
+}
+
+.slide a:hover {
+    background: #7b4fff;
+}
+
+.arrows {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 30; /* garante que botões fiquem clicáveis */
+}
+
+.arrows button {
+    padding: 12px 22px;
+    border: none;
+    font-size: 18px;
+    background: #7b4fff;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.arrows button:hover {
+    filter: brightness(0.8);
+}
+
+/* SOBRE */
+.card {
+    background: #111;
+    padding: 25px 35px;
+    border-radius: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    margin-bottom: 500;
+
+    border: 1px solid rgba(140, 82, 255, 0.25);
+    box-shadow:
+        0 0 15px rgba(140, 82, 255, 0.15),
+        inset 0 0 10px rgba(255, 255, 255, 0.03);
+
+    color: #ccc;
+    line-height: 1.6;
+    font-size: 1.1rem;
+
+    transition: 0.3s ease;
+}
+
+#sobre h2 {
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+/* ANIMAÇÃO NO HOVER (BRILHO) */
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 0 20px rgba(140, 82, 255, 0.35),
+        inset 0 0 12px rgba(255, 255, 255, 0.05);
+    border-color: rgba(140, 82, 255, 0.45);
+}
+
+#sobre {
+    padding: 120px 10%;
+}
+
+#sobre h2 {
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+    color: #7b4fff;
+}
+
+#sobre p {
+    width: 70%;
+    opacity: 0.8;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+}
+
+/* CONTATO */
+#contato {
+    padding: 120px 10%;
+}
+
+#contato h2 {
+    font-size: 2rem;
+    color: #7b4fff;
+    margin-bottom: 20px;
+}
+
+#contato a {
+    color: #fff;
+    display: block;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+#contato a:hover {
+    color: #7b4fff;
+}
+
+.proj {
+    font-size: 2.3rem;
+    color: #7b4fff;
+    text-align: center;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+/* AVATAR */
+.avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 4px solid #7b4fff;
+    box-shadow: 0 0 25px #7b4fff;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* RODAPÉ */
+.footer {
+    background: #0a0a14;
+    border-top: 1px solid rgba(123, 79, 255, 0.3);
+    padding: 40px 10%;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.footer-left h3 {
+    color: #7b4fff;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.footer-left p {
+    opacity: 0.7;
+}
+
+.footer-center a,
+.footer-right a {
+    display: block;
+    margin: 6px 0;
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.copy {
+    opacity: 0.6;
+    margin-top: 10px;
+    font-size: 0.95rem;
+}

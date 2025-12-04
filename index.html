@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <link rel="stylesheet" href="CSS/responsivo.css">
+    
+    <!-- Fonte Poppins do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet" />
+    
+    <title>Portifolio Sôlin Heusser</title>
+</head>
+
+<body>
+    <!-- ========================= -->
+    <!-- HEADER -->
+    <!-- ========================= -->
+    <header>
+        <h1>Sôlin Heusser</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#sobre">Sobre Mim</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- ========================= -->
+    <!-- SEÇÃO HOME -->
+    <!-- ========================= -->
+    <section id="home">
+        
+        <!-- AVATAR -->
+        <div class="avatar">
+            <img src="img/img1.jpg" alt="Avatar de Sôlin Heusser" />
+        </div>
+
+        <h2>Desenvolvedor Full Stack em Formação</h2>
+        <p>
+            Construindo aplicações modernas, responsivas e com foco em performance. <br>
+            Experiência com HTML • CSS • JavaScript • C • Atualmente estudando • Node.js, • React e • PostgreSQL para me tornar Desenvolvedor Full Stack.
+        </p>
+    </section>
+
+    <!-- ========================= -->
+    <!-- SEÇÃO SOBRE MIM -->
+    <!-- ========================= -->
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <div class="card">
+            <p>
+                Sou Sôlin Heusser, estudante do último semestre de Análise e Desenvolvimento de Sistemas e desenvolvedor Full Stack em formação.
+            <br>Trabalho com HTML, CSS e JavaScript, e atualmente estou evoluindo em React, Node.js e PostgreSQL para construir aplicações completas, performáticas e escaláveis.
+            <br>Gosto de aplicações praticas que resolvem problemas reais, como calculadoras, ferramentas e aplicações conectadas a APIs.
+            </p>
+        </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- SEÇÃO PROJETOS (SLIDER) -->
+    <!-- ========================= -->
+    <h2 class="proj">Projetos</h2>
+
+    <section id="projetos" class="slider-container">
+        <div class="slider-list">
+            <!-- SLIDE 1: Calculadora de Piso -->
+            <div class="slide active">
+                <img src="img/1.png" alt="Calculadora de Piso">
+                <div class="content">
+                    <h3>Calculadora de Piso</h3>
+                    <p>Ferramenta completa que calcula piso, argamassa e rejunte com base na metragem informada pelo usuário. Desenvolvida com HTML, CSS e JavaScript puro, com foco em UX e precisão dos resultados.</p>
+                    <a href="https://zuhause.arq.br/calculapiso/" target="_blank">Ver Projeto</a>
+                </div>
+            </div>
+
+            <!-- SLIDE 2: Gerador de Receitas -->
+            <div class="slide">
+                <img src="img/2.png" alt="Gerador de Receitas">
+                <div class="content">
+                    <h3>Gerador de Receitas</h3>
+                    <p>Busca por ingrediente usando API externa e retorna receitas dinamicamente.</p>
+                    <a href="https://zuhause.arq.br/receita/" target="_blank">Ver Projeto</a>
+                </div>
+            </div>
+
+            <!-- SLIDE 3: Lista de Tarefas -->
+            <div class="slide">
+                <img src="img/4.png" alt="Lista de Tarefas">
+                <div class="content">
+                    <h3>Lista de Tarefas</h3>
+                    <p>Aplicação simples para criar, concluir e excluir tarefas. Interface leve e lógica feita com manipulação do DOM e JavaScript puro.</p>
+                    <a href="https://zuhause.arq.br/lista/" target="_blank">Ver Projeto</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTÕES DE NAVEGAÇÃO DO SLIDER -->
+        <div class="arrows">
+            <button id="back">&lt;</button>
+            <button id="next">&gt;</button>
+        </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- SEÇÃO CONTATO -->
+    <!-- ========================= -->
+    <section id="contato">
+        <h2>Contato</h2>
+        <a href="mailto:heusser.solin@gmail.com">Email: heusser.solin@gmail.com</a>
+        <a href="https://www.linkedin.com/in/s%C3%B4lin-heusser-9453511b8/" target="_blank">LinkedIn</a>
+    </section>
+
+    <!-- ========================= -->
+    <!-- RODAPÉ -->
+    <!-- ========================= -->
+    <footer class="footer">
+        <p class="copy">© 2025 - Portfólio de Sôlin Heusser</p>
+    </footer>
+
+    <!-- SCRIPT JS -->
+    <script src="JS/script.js"></script>
+</body>
+
+</html>
