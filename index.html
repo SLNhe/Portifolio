@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="CSS/estilo.css">
     <link rel="stylesheet" href="CSS/responsivo.css">
-    
+
     <!-- Fonte Poppins do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet" />
-    
+
     <title>Portifolio Sôlin Heusser</title>
 </head>
 
@@ -33,16 +33,18 @@
     <!-- SEÇÃO HOME -->
     <!-- ========================= -->
     <section id="home">
-        
+
         <!-- AVATAR -->
         <div class="avatar">
             <img src="img/img1.jpg" alt="Avatar de Sôlin Heusser" />
         </div>
 
-        <h2>Desenvolvedor Full Stack em Formação</h2>
+        <h2>Análise e Desenvolvimento de Sistemas | Backend & Implantação</h2>
         <p>
-            Construindo aplicações modernas, responsivas e com foco em performance. <br>
-            Experiência com HTML • CSS • JavaScript • C • Atualmente estudando • Node.js, • React e • PostgreSQL para me tornar Desenvolvedor Full Stack.
+            Foco no desenvolvimento completo de aplicações: desde o planejamento das regras até o momento de colocar o sistema no ar de forma automática. <br>
+            Tecnologias: Python (FastAPI), SQL, JavaScript, HTML, CSS
+            <br> • Implantação: GitHub Pages e estudos em Alembic
+            <br> • Processos: Interesse em Metodologias Ágeis e Requisitos.
         </p>
     </section>
 
@@ -53,12 +55,23 @@
         <h2>Sobre Mim</h2>
         <div class="card">
             <p>
-                Sou Sôlin Heusser, estudante do último semestre de Análise e Desenvolvimento de Sistemas e desenvolvedor Full Stack em formação.
-            <br>Trabalho com HTML, CSS e JavaScript, e atualmente estou evoluindo em React, Node.js e PostgreSQL para construir aplicações completas, performáticas e escaláveis.
-            <br>Gosto de aplicações praticas que resolvem problemas reais, como calculadoras, ferramentas e aplicações conectadas a APIs.
+                Sou Sôlin Heusser, formando em Análise e Desenvolvimento de Sistemas. Durante a faculdade, busquemos
+                entender não apenas o código, mas como um projeto funciona desde o planejamento inicial até o momento de
+                colocar o sistema no ar.
+                <br><br>
+                No desenvolvimento prático, meu foco atual é o Backend com Python e FastAPI, utilizando o banco de dados
+                SQLite. Para a parte de implantação de projetos, utilizo o GitHub Pages para publicar sites de forma
+                automática e estou aprendendo a usar o Alembic para organizar as tabelas do banco.
+                <br><br>
+                Também tenho muito interesse nas áreas de Gestão de Projetos e Metodologias Ágeis, buscando entender
+                como organizar tarefas e regras de negócio. Meu objetivo é criar soluções simples, organizadas e seguras
+                que resolvam problemas reais do dia a dia.
             </p>
         </div>
     </section>
+
+
+
 
     <!-- ========================= -->
     <!-- SEÇÃO PROJETOS (SLIDER) -->
@@ -67,33 +80,51 @@
 
     <section id="projetos" class="slider-container">
         <div class="slider-list">
-            <!-- SLIDE 1: Calculadora de Piso -->
+            
+            <!-- SLIDE 1: API de Delivery -->
             <div class="slide active">
-                <img src="img/1.png" alt="Calculadora de Piso">
+                <!-- Ícone ou Imagem representativa para a API backend -->
+                <div class="api-placeholder" style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:#111; color:#fff; font-size:3rem; font-weight:800;">⚙️ API</div>
                 <div class="content">
-                    <h3>Calculadora de Piso</h3>
-                    <p>Ferramenta completa que calcula piso, argamassa e rejunte com base na metragem informada pelo usuário. Desenvolvida com HTML, CSS e JavaScript puro, com foco em UX e precisão dos resultados.</p>
-                    <a href="https://zuhause.arq.br/calculapiso/" target="_blank">Ver Projeto</a>
+                    <h3>API de Delivery (Pizzaria)</h3>
+                    <p>Sistema backend com FastAPI para gerenciamento de pedidos e contas. Inclui controle de acessos (RBAC), autenticação com JWT e banco de dados SQLite estruturado.</p>
+                    <a href="https://github.com/SLNhe/fastapi-delivery-api" target="_blank">GitHub</a>
                 </div>
             </div>
 
-            <!-- SLIDE 2: Gerador de Receitas -->
+            <!-- SLIDE 2: Calculadora de Piso -->
+            <div class="slide">
+                <img src="img/1.png" alt="Calculadora de Piso">
+                <div class="content">
+                    <h3>Calculadora de Piso</h3>
+                    <p>Ferramenta completa que calcula piso, argamassa e rejunte com base na metragem informada pelo
+                        usuário. Desenvolvida com HTML, CSS e JavaScript puro, com foco em UX e precisão dos resultados.
+                    </p>
+                    <a href="https://slnhe.github.io/calcula-piso-online/" target="_blank">Ver Projeto</a>
+                    <a href="https://github.com/SLNhe/calcula-piso-online" target="_blank">GitHub</a>
+                </div>
+            </div>
+
+            <!-- SLIDE 3: Gerador de Receitas -->
             <div class="slide">
                 <img src="img/2.png" alt="Gerador de Receitas">
                 <div class="content">
                     <h3>Gerador de Receitas</h3>
                     <p>Busca por ingrediente usando API externa e retorna receitas dinamicamente.</p>
-                    <a href="https://zuhause.arq.br/receita/" target="_blank">Ver Projeto</a>
+                    <a href="https://slnhe.github.io/Gerador-De-Receitas-Por-Ingrediente/" target="_blank">Ver Projeto</a>
+                    <a href="https://github.com/SLNhe/Gerador-De-Receitas-Por-Ingrediente" target="_blank">GitHub</a>
                 </div>
             </div>
 
-            <!-- SLIDE 3: Lista de Tarefas -->
+            <!-- SLIDE 4: Lista de Tarefas -->
             <div class="slide">
                 <img src="img/4.png" alt="Lista de Tarefas">
                 <div class="content">
                     <h3>Lista de Tarefas</h3>
-                    <p>Aplicação simples para criar, concluir e excluir tarefas. Interface leve e lógica feita com manipulação do DOM e JavaScript puro.</p>
-                    <a href="https://zuhause.arq.br/lista/" target="_blank">Ver Projeto</a>
+                    <p>Aplicação simples para criar, concluir e excluir tarefas. Interface leve e lógica feita com
+                        manipulação do DOM e JavaScript puro.</p>
+                    <a href="https://slnhe.github.io/To-Do-List_JS/" target="_blank">Ver Projeto</a>
+                    <a href="https://github.com/SLNhe/To-Do-List_JS" target="_blank">GitHub</a>
                 </div>
             </div>
         </div>
@@ -118,7 +149,7 @@
     <!-- RODAPÉ -->
     <!-- ========================= -->
     <footer class="footer">
-        <p class="copy">© 2025 - Portfólio de Sôlin Heusser</p>
+        <p class="copy">© 2026 - Portfólio de Sôlin Heusser</p>
     </footer>
 
     <!-- SCRIPT JS -->
